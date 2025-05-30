@@ -146,7 +146,6 @@ This repository contains an **Alteryx workflow** that ingests, cleans, integrate
 
 ```text
 INPUT ➝ CLEAN ➝ DEDUP ➝ JOIN ➝ DERIVE ➝ SELECT ➝ SORT ➝ OUTPUT
-
 ---
 
 ## 🖼️ Workflow Diagram
