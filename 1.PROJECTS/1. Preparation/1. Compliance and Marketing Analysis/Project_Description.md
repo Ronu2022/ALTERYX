@@ -147,9 +147,9 @@ This repository contains an **Alteryx workflow** that ingests, cleans, integrate
 ```text
 INPUT ➝ CLEAN ➝ DEDUP ➝ JOIN ➝ DERIVE ➝ SELECT ➝ SORT ➝ OUTPUT
 
-
+---
 
 ## 🖼️ Workflow Diagram
 
-![Workflow Diagram](SPring_Marketing_project.png)
+![Workflow Diagram](workflow_spring_marketing_project.png)
 
