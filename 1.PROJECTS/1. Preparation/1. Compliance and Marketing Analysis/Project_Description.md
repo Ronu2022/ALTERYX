@@ -26,31 +26,31 @@ This repository contains an **Alteryx workflow** that ingests, cleans, integrate
 ## 📁 Input Datasets
 
 ### 1. `Loan_Applications.csv`
-| Column | Description |
-|--------|-------------|
-| `Customer_Name` | Full name |
-| `Email` | Primary key |
-| `Loan_Amount` | May be 0 or negative |
-| `Annual_Income` | May be missing or 0 |
-| `Credit_Score` | Range: 300–850, may be missing/invalid |
+| Column             | Description                          |
+|--------------------|--------------------------------------|
+| `Customer_Name`    | Full name                            |
+| `Email`            | Primary key                          |
+| `Loan_Amount`      | May be 0 or negative                 |
+| `Annual_Income`    | May be missing or 0                  |
+| `Credit_Score`     | Range: 300–850, may be missing/invalid |
 | `Application_Status` | Approved, Pending, Rejected, Incomplete |
-| `Application_Date` | May be invalid |
+| `Application_Date` | May be invalid                       |
 
 ### 2. `Payment_History.csv`
-| Column | Description |
-|--------|-------------|
-| `Email` | Primary key |
-| `Loan_ID` | Unique loan ID |
-| `Payment_Amount` | May be <= 0 |
-| `Payment_Date` | May be missing/invalid |
-| `Days_Late` | May be null or negative |
+| Column           | Description                        |
+|------------------|------------------------------------|
+| `Email`          | Primary key                        |
+| `Loan_ID`        | Unique loan ID                     |
+| `Payment_Amount` | May be <= 0                        |
+| `Payment_Date`   | May be missing/invalid             |
+| `Days_Late`      | May be null or negative            |
 
 ### 3. `Contact_Preferences.csv`
-| Column | Description |
-|--------|-------------|
-| `Email` | Primary key |
-| `Marketing_Consent` | Yes, No, Unknown |
-| `Preferred_Channel` | Email, Phone, SMS, None |
+| Column              | Description                     |
+|---------------------|---------------------------------|
+| `Email`             | Primary key                     |
+| `Marketing_Consent` | Yes, No, Unknown                |
+| `Preferred_Channel` | Email, Phone, SMS, None         |
 
 ---
 
@@ -94,15 +94,15 @@ This repository contains an **Alteryx workflow** that ingests, cleans, integrate
 
 ## 🧮 Derived Fields
 
-| Field | Logic |
-|-------|-------|
-| `Loan_to_Income_Ratio` | `Loan_Amount / Annual_Income` |
-| `Compliance_Flag` | `"Non-Compliant"` if `Loan_to_Income_Ratio > 0.4` or `Credit_Score < 500`, else `"Compliant"` |
-| `Marketing_Score` | Calculated based on multiple rules below |
-| `Days_Since_Application` | `DateDiff('05-30-2025', Application_Date)` |
+| Field                    | Logic                                                                 |
+|--------------------------|-----------------------------------------------------------------------|
+| `Loan_to_Income_Ratio`   | `Loan_Amount / Annual_Income`                                        |
+| `Compliance_Flag`        | `"Non-Compliant"` if `Loan_to_Income_Ratio > 0.4` or `Credit_Score < 500`, else `"Compliant"` |
+| `Marketing_Score`        | Calculated based on multiple rules below                             |
+| `Days_Since_Application` | `DateDiff('05-30-2025', Application_Date)`                           |
 
 ### Marketing Score Formula:
-- Start at 50
+- Start at **50**
 - `+30` if `Marketing_Consent = 'Yes'`
 - `+20` if `Credit_Score >= 700`
 - `-10` if `Days_Late > 5` (treat null as 0)
@@ -146,9 +146,3 @@ This repository contains an **Alteryx workflow** that ingests, cleans, integrate
 
 ```text
 INPUT ➝ CLEAN ➝ DEDUP ➝ JOIN ➝ DERIVE ➝ SELECT ➝ SORT ➝ OUTPUT
----
-
-## 🖼️ Workflow Diagram
-
-![Workflow Diagram](workflow_spring_marketing_project.png)
-
