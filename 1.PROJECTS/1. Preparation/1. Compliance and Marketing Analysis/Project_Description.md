@@ -151,3 +151,4 @@ INPUT ➝ CLEAN ➝ DEDUP ➝ JOIN ➝ DERIVE ➝ SELECT ➝ SORT ➝ OUTPUT
 ### 🖼️ Workflow Diagram
 
 ![Workflow Diagram](workflow_spring_marketing_project.png)
+![Workflow Diagram](risk_score.png)
