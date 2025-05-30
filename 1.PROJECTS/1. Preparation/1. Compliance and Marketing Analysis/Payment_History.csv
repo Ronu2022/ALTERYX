@@ -1,0 +1,11 @@
+Email,Loan_ID,Payment_Amount,Payment_Date,Days_Late
+john.smith@email.com,L001,500,2025-02-01,5
+jane.doe@email.com,L002,1000,2025-02-10,10
+jane.doe@email.com,L002,900,2025-02-15,8
+bob.wilson@email.com,L003,1200,2025-03-01,0
+sarah.lee@email.com,L004,-100,2025-01-30,0
+tom.clark@email.com,L005,1500,2025-03-10,15
+mike.johnson@email.com,L006,2000,2025-03-15,-5
+alice.brown@email.com,L007,800,,10
+john.smith@email.com,L001,600,2025-02-05,3
+david.king@email.com,L008,700,2019-12-15,2

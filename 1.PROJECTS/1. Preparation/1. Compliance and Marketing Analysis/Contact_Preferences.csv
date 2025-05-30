@@ -1,0 +1,11 @@
+Email,Marketing_Consent,Preferred_Channel
+john.smith@email.com,Yes,Email
+jane.doe@email.com,No,Phone
+jane.doe@email.com,Yes,SMS
+bob.wilson@email.com,Yes,Email
+sarah.lee@email.com,Unknown,None
+tom.clark@email.com,Yes,SMS
+mike.johnson@email.com,Yes,Email
+emily.davis@email.com,No,
+david.king@email.com,Yes,Phone
+chris.moore@email.com,Yes,Email

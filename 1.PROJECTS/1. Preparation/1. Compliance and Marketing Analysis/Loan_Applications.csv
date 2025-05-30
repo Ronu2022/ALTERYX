@@ -1,0 +1,12 @@
+Customer_Name,Email,Loan_Amount,Annual_Income,Credit_Score,Application_Status,Application_Date
+John Smith,john.smith@email.com,5000,60000,720,Approved,2025-01-15
+Jane Doe,jane.doe@email.com,15000,30000,650,Pending,2025-02-01
+John Smith,john.smith@email.com,7000,62000,710,Approved,2025-01-20
+Alice Brown,alice.brown@email.com,8000,0,450,Incomplete,2025-03-10
+Bob Wilson,bob.wilson@email.com,12000,80000,780,Approved,2025-02-15
+Sarah Lee,sarah.lee@email.com,6000,50000,480,Rejected,2025-01-25
+Tom Clark,tom.clark@email.com,20000,90000,800,Approved,2025-03-01
+Jane Doe,jane.doe@email.com,12000,30000,680,Pending,2025-02-05
+Emily Davis,emily.davis@email.com,4000,55000,,Approved,2025-02-20
+Mike Johnson,mike.johnson@email.com,25000,100000,820,Approved,2025-03-05
+David King,david.king@email.com,10000,60000,600,Approved,2019-12-01
